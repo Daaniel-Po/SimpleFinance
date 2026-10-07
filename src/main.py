@@ -51,7 +51,23 @@ while True:
                 case 3:
                     pass
                 case 4:
-                    pass
+                     if info_users == []:
+                        print("Nenhum registro para atualizar")
+                    else:
+                        for index in range(len(info_users)):
+                            print(index, info_users[index])
+                        input_update = int(
+                            input("Digite o número do registro que deseja atualizar: "))
+                        if input_update >= 0 and input_update < len(info_users):
+                            income = float(input("Digite a nova renda mensal: "))
+                            expenses = float(input("Digite as novas despesas mensais: "))
+
+                            economy_month = income - expenses
+
+                            info_users[input_update] = [ income, expenses, economy_month ]
+                            print("Registro atualizado com sucesso!")
+                        else:
+                            print("Número inválido")
                 case 5:
                     break
                 case _:
