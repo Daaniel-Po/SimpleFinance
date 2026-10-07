@@ -41,7 +41,11 @@ while True:
             ###########Conditions TUI###########
             match input_action:
                 case 1:
-                    pass
+                    income = float(input("Digite sua renda mensal: "))
+                    expenses = float(input("Digite suas despesas mensais: "))
+                    economy_month = income - expenses
+                    info_users.append([income, expenses, economy_month])
+                    print("Dados adicionados com sucesso!")
                 case 2:
                     pass
                 case 3:
